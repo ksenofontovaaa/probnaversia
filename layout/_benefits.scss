@@ -1,0 +1,36 @@
+.benefits {
+    display: flex;
+}
+
+.benefits__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.icon-ben {
+    width: 270px;
+    height: 120px;
+    @extend %light-back;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.benefits__title {
+    @include text(700, 14, 1.14, 0.03);
+
+    text-transform: uppercase;
+    @extend %dark-color;
+
+    margin-bottom: 10px;
+}
+.benefits__description {
+    @include  text(400, 14, 1.71, 0.03);
+    @extend %link-color
+    
+    }
+

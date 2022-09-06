@@ -1,0 +1,41 @@
+.all-clients {
+    padding-top: 90px;
+    padding-bottom: 90px;
+   
+}
+
+.clients {
+    display: flex;
+    @extend %margin-auto;
+
+    gap: 30px;
+    
+}
+
+
+.clients__link {
+    @extend %flex-center;
+    
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    &:hover {
+        border-color: #2196F3;
+    }
+}
+
+.clients__icon {    
+    fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    .clients__link:hover &{
+        fill: #2196F3;   
+    }
+    
+}
+
+.all-clients__title {
+    @extend %title-of-section;
+    margin-bottom: 50px;
+}

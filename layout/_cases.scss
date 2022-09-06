@@ -1,0 +1,76 @@
+.cases {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    gap: 30px;
+}
+
+.cases__item {
+    width: 370px;
+}
+
+.labor {
+    position: relative;
+    overflow: hidden;
+  
+}
+
+.labor__text {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 101%;
+    padding: 63px 24px;
+
+    @include  text(400, 18, 1.56, 0.03);
+    @extend %light-color;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    .cases__link:hover & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+.cases__link {
+    display: inline-block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        cursor: pointer;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+
+.case {
+    padding: 20px 24px;
+
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+.case__name {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    @extend %dark-color;
+
+
+    margin-bottom: 4px;
+}
+
+.case__type {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    @extend %link-color;
+
+}
+
+
